@@ -53,6 +53,7 @@ const addTodo = text => {
   const newTodos = [...todos, {text}];
   setTodos(newTodos);
 }
+
  const completeTodo = index => {
    const newTodos = [...todos];
    newTodos[index].isCompleted = true;
@@ -64,9 +65,10 @@ const addTodo = text => {
    newTodos.splice(index, 1);
    setTodos(newTodos);
  }
+
    return (
      <div>
-       <div className="">
+       <div >
 {todos.map((todo,index)=> (
 <Todo key={index} 
 index={index} 
@@ -82,5 +84,5 @@ removeTodo={removeTodo}
   
    )
  }
- 
+
  export default App;
