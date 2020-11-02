@@ -68,7 +68,7 @@ const addTodo = text => {
 
    return (
      <div>
-       <div >
+       <div className="">
 {todos.map((todo,index)=> (
 <Todo key={index} 
 index={index} 
