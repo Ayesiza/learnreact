@@ -7,6 +7,8 @@ body {
 .form-control {
 	font-size: 15px;
 }
+
+
 .form-control, .form-control:focus, .input-group-text {
 	border-color: #e1e1e1;
 }
@@ -30,6 +32,9 @@ body {
 	color: #333;
 	font-weight: bold;
 	margin-top: 0;
+}
+.red{
+	color:rgb(201, 31, 31)
 }
 .popup-msg{
 color:blue

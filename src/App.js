@@ -1,90 +1,51 @@
-import React, { useState } from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 import './App.css';
-
+// import axios from 'axios';
+import Register from './component/Register'
+import Login from './component/Login'
 
 function App() {
-  const [text, setText] = useState('')
-  const [submitted, setSubmitted] = useState(false)
- 
- const handleChange= (e)=>{
-   setText({...text, value:e.target.value})
- }
+  return(
+    <Router>
+    <main className="">
 
-  const handleSubmit=(e) =>{
-    e.preventDefault()
-    setSubmitted(true);
-  }
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <Link to="/" class="navbar-brand">MyPride</Link>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
 
-  return (
-    <div class="brgcolor">
-      <div class="signup-form">
-    <form  onSubmit={handleSubmit}>
-		<h2>Sign Up</h2>
-		<p>Please fill in this form to create an account!</p>
-		<hr/>
-   { submitted ? <div className="popup-msg">Success! Thank you registering</div> : null}
-        <div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-				
-				</div>
-        <input 
-        value={text.firstName} 
-        onChange={handleChange }
-        type="text" 
-        class="form-control" 
-        name="firstName" placeholder="firstName" 
-        required="required"/>
-			</div>
-        </div>
-        <div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					
-				</div>
-        <input 
-        value={text.email}
-        onChange={handleChange }
-        type="email"
-         class="form-control" 
-         name="email"
-          placeholder="Email Address"
-          required="required"/>
-			</div>
-        </div>
-		<div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-				
-				</div>
-        <input 
-        value={text.password}
-        onChange={handleChange }
-        type="password" 
-        class="form-control" 
-        name="password" 
-        placeholder="Password" 
-        required="required"/>
-			</div>
-        </div>
-	
-        <div class="form-group">
-			<label class="form-check-label"><input type="checkbox" required="required"/> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-		</div>
-		<div class="form-group">
-            <button type="submit" class="btn btn-lg">Sign Up</button>
-        </div>
-        <div class="text-center">Already have an account? <a >Login here</a></div>
-    </form>
-
-</div>
-
-
-    </div>
+      <li class="nav-item active">
+        <Link to="/"class="nav-link" >Home <span class="sr-only">(current)</span></Link>
+      </li>
+      <li class="nav-item">
+        <Link to ="/Register" class="nav-link" >Register</Link>
+      </li>
+      <li class="nav-item">
+        <Link to ="/Login" class="nav-link" >Login</Link>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
       
-  
-    
-  )
-}
+      <Switch>
+       <Route path="/" exact  component={Home} />
+       <Route  path="/Register" component ={Register}/>
+       <Route  path="/Login" component={Login}/>
+       </Switch>
+    </main>
+    </Router>
 
+  );
+
+}
+const Home = () => (
+  <Fragment>
+    <h1>Welcome to my  First React Application</h1>
+  </Fragment>
+  );
 export default App
