@@ -38,7 +38,7 @@ function Register() {
           onChange={handleChange }
           type="text" 
           class="form-control" 
-          name="firstName" placeholder="firstName" 
+          name="firstName" placeholder="FirstName" 
          />
               </div>
         { submitted && !values.firstName?<span className="red">Please enter firstName</span>: null}
