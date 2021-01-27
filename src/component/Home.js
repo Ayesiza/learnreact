@@ -10,7 +10,7 @@ function Home() {
         <div className="wrapper">
              <h1 className="app-heading">Welcome  To MyGallery</h1>
              
-             <StarRating />
+             <StarRating  />
              <ImageLightBox />
  
      </div>

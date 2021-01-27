@@ -85,7 +85,7 @@ color:blue
 	background: #3089b3 !important;
 }
 .signup-form a {
-	color: #fff;	
+	color: rgb(255, 255, 255);	
 	text-decoration: underline;
 }
 .signup-form a:hover {
