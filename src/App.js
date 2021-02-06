@@ -6,10 +6,12 @@ import Register from './component/Register'
 import Login from './component/Login'
 import Navbar from './component/Navbar'
 import Home from './component/Home'
+import Shop from './component/Shop';
 // import ImageLightBox from './component/ImageLightBox'
 
 function App() {
   return(
+   
     <Router>
     <Fragment className="wrapper">
 
@@ -21,7 +23,7 @@ function App() {
        </Switch>
        
     </Fragment>
-    
+    <Shop />
     </Router>
     
 
