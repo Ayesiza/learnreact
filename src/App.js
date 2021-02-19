@@ -1,15 +1,17 @@
 import React, { Fragment} from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
-// import axios from 'axios';
+
 import Register from './component/Register'
 import Login from './component/Login'
 import Navbar from './component/Navbar'
 import Home from './component/Home'
-// import ImageLightBox from './component/ImageLightBox'
+import Shop from './component/Shop';
+
 
 function App() {
   return(
+   
     <Router>
     <Fragment className="wrapper">
 
@@ -21,7 +23,7 @@ function App() {
        </Switch>
        
     </Fragment>
-    
+    <Shop />
     </Router>
     
 
