@@ -17,6 +17,9 @@ function Navbar() {
         <Link to ="/Register" class="nav-link link-text" >Register</Link>
       </li>
       <li class="nav-item">
+        <Link to ="/another" class="nav-link link-text" >Another</Link>
+      </li>
+      <li class="nav-item">
         <Link to ="/Login" class="nav-link link-text " >Login</Link>
       </li>
      
