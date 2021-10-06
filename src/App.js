@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TodoForm from './component/TodoForm'
+//import TodoForm from './component/TodoForm'
 import TodoList from './component/TodoList'
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <div>
      
       <TodoList />
-      <TodoForm />
+     
     </div>
   )
 }
