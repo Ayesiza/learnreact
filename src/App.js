@@ -1,14 +1,20 @@
 import React from 'react'
+import Sidebar from './component/sidebar/Sidebar'
+import Topbar from './component/topbar/Topbar';
+import './App.css';
+import Home from './pages/home/Home';
 
-//import TodoForm from './component/TodoForm'
-import TodoList from './component/TodoList'
 
 const App = () => {
   return (
-    <div>
+    <div >
      
-      <TodoList />
-     
+     <Topbar />
+     <div className="container">
+       <Sidebar/>
+        <Home />
+       
+     </div>
     </div>
   )
 }
