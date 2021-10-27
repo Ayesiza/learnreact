@@ -1,6 +1,8 @@
-import React, { Fragment} from 'react';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import React from 'react'
+import Sidebar from './component/sidebar/Sidebar'
+import Topbar from './component/topbar/Topbar';
 import './App.css';
+
 
 import Register from './component/Register'
 import Login from './component/Login'
@@ -15,13 +17,17 @@ function App() {
     <Router>
     <Fragment className="wrapper">
 
-     <Navbar />
-      <Switch>
-       <Route path="/" exact  component={Home} />
-       <Route  path="/Register" component ={Register}/>
-       <Route  path="/Login" component={Login}/>
-       </Switch>
+
+const App = () => {
+  return (
+    <div >
+     
+     <Topbar />
+     <div className="container">
+       <Sidebar/>
+        <Home />
        
+
     </Fragment>
     <Shop />
     </Router>
@@ -29,6 +35,8 @@ function App() {
 
   );
 
+
 }
 
 export default App
+
