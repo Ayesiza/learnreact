@@ -1,19 +1,32 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import TodoList from './component/TodoList';
-import TotalItems from './component/TotalItems';
-import TodoForm from './component/TodoForm';
+
+import React from 'react'
+// import Sidebar from './component/sidebar/Sidebar'
+// import Topbar from './component/topbar/Topbar';
+import './App.css';
+import Filters from './component/filters/Filters';
 
 
-const App = () => {
-	return (
-		<div className='container bg-white p-4 mt-5'>
-			<h1>My Todo List</h1>
-		<TodoForm/>
-			<TodoList />
-			<TotalItems/>
-		</div>
-	);
-};
+// import Register from './component/Register'
+// import Login from './component/Login'
+// import Navbar from './component/Navbar'
+// import Home from './component/Home'
+// import Shop from './component/Shop';
+import Products from './component/products/Products';
 
-export default App;
+
+function App() {
+  return(
+   
+   <div>
+	   <Filters />
+	   <Products/>
+   </div>
+
+  );
+
+
+}
+
+export default App
+
+
