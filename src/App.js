@@ -1,42 +1,19 @@
-import React from 'react'
-import Sidebar from './component/sidebar/Sidebar'
-import Topbar from './component/topbar/Topbar';
-import './App.css';
-
-
-import Register from './component/Register'
-import Login from './component/Login'
-import Navbar from './component/Navbar'
-import Home from './component/Home'
-import Shop from './component/Shop';
-
-
-function App() {
-  return(
-   
-    <Router>
-    <Fragment className="wrapper">
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import TodoList from './component/TodoList';
+import TotalItems from './component/TotalItems';
+import TodoForm from './component/TodoForm';
 
 
 const App = () => {
-  return (
-    <div >
-     
-     <Topbar />
-     <div className="container">
-       <Sidebar/>
-        <Home />
-       
+	return (
+		<div className='container bg-white p-4 mt-5'>
+			<h1>My Todo List</h1>
+		<TodoForm/>
+			<TodoList />
+			<TotalItems/>
+		</div>
+	);
+};
 
-    </Fragment>
-    <Shop />
-    </Router>
-    
-
-  );
-
-
-}
-
-export default App
-
+export default App;
